@@ -38,7 +38,7 @@ var offerScheme = {
 
 v.addSchema(offerScheme, '/oneOffer');
 
-//-------Offer example-------
+/*-------Offer example-------
 {
 	"id": 			1, 
 	"city": 		"Gummersbach", 	
@@ -47,7 +47,7 @@ v.addSchema(offerScheme, '/oneOffer');
 	"size": 		9,  
 	"roomqty": 		1
 }
-
+*/
 
 //Add data
 
