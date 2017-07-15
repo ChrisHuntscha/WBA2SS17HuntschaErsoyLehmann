@@ -57,6 +57,9 @@ data_offers.init(app);
 var data_testdata = require('./data/testdata.js');
 data_testdata.init(app);
 
+app.get('/', function (req, res) {
+	console.log('get');
+}
 
 //Starting the app
 app.listen(settings.port, function(){
