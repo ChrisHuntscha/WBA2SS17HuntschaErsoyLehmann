@@ -19,7 +19,7 @@ module.exports = {
                         return res.status(500).json(message);
                     }
 
-                    var offers = [];
+                    var newOffers = [];
 
                     if (rep.length == 0) {
                         res.json(offers);
@@ -41,7 +41,7 @@ module.exports = {
                         var message = {
                             "success": {
                                 "message": "Request success!",
-                                "offers": offers
+                                "offers": rep
                             },
                             "error": false
                         }
@@ -60,7 +60,7 @@ module.exports = {
                     var message = {
                         "success": false,
                         "error": {
-                            "message": "Kein Body Text angegeben!"
+                            "message": "Missing body text!"
                         }
                     }
                     return res.status(400).json(message);
@@ -150,7 +150,7 @@ module.exports = {
                         var message = {
                             "success": {
                                 "message": "Offer found!",
-                                "book": rep
+                                "offer": rep
                             },
                             "error": false
                         }
@@ -222,7 +222,7 @@ module.exports = {
                                 var message = {
                                     "success": {
                                         "message": "Successfully updated!",
-                                        "updatedBook": updatedOffer
+                                        "updatedOffer": updatedOffer
                                     },
                                     "error": false
                                 }
