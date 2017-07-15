@@ -10,7 +10,7 @@ global.Validator = require('jsonschema').Validator;
 global.app = express();
 global.jsonParser = bodyParser.json();
 global.v = new Validator();
-global.db = redis.createClient();
+//global.db = redis.createClient();
 app.use(jsonParser);
 
 // Settings
