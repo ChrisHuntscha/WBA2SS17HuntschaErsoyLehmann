@@ -10,6 +10,8 @@ global.Validator = require('jsonschema').Validator;
 global.app = express();
 global.jsonParser = bodyParser.json();
 global.v = new Validator();
+
+//Gibt Fehler ApplicationError H10 bei Heroku
 //global.db = redis.createClient();
 app.use(jsonParser);
 
@@ -56,10 +58,6 @@ data_offers.init(app);
 //Testdata
 var data_testdata = require('./data/testdata.js');
 data_testdata.init(app);
-
-app.get('/', function (req, res) {
-	console.log('get');
-}
 
 //Starting the app
 app.listen(settings.port, function(){
